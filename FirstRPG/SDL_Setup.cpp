@@ -38,11 +38,11 @@ SDL_Event* CSDL_Setup::GetEvent()
 
 void CSDL_Setup::Begin()
 {
-	SDL_PollEvent(GetEvent());
-	SDL_RenderClear(GetRenderer());
+	SDL_PollEvent(mainEvent);
+	SDL_RenderClear(renderer);
 }
 
 void CSDL_Setup::End() const
 {
-	SDL_RenderPresent(GetRenderer());
+	SDL_RenderPresent(renderer);
 }
