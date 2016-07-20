@@ -40,8 +40,8 @@ void CMain::GameLoop(void) const
 {
 	while (!quit && csdl_setup->GetEvent()->type != SDL_QUIT)
 	{
-		SDL_PollEvent(csdl_setup->GetEvent());
-		SDL_RenderClear(csdl_setup->GetRenderer());
+		csdl_setup->Begin();
+
 		//EXECUTION WHAT IS BEHIND WHAT
 		//DRAW GRASS
 		SDL_RenderCopy(csdl_setup->GetRenderer(), grass_image, nullptr, &grass_rect);
@@ -50,6 +50,6 @@ void CMain::GameLoop(void) const
 
 
 
-		SDL_RenderPresent(csdl_setup->GetRenderer());
+		csdl_setup->End();
 	}
 }

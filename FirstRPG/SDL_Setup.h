@@ -6,6 +6,8 @@ public:
 	~CSDL_Setup();
 	SDL_Renderer* GetRenderer() const; //TWO GETTERS to get the event and renderer
 	SDL_Event* GetEvent();
+	void Begin();
+	void End() const;
 
 private:
 	SDL_Window* window;

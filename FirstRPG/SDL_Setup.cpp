@@ -35,3 +35,14 @@ SDL_Event* CSDL_Setup::GetEvent()
 {
 	return mainEvent;
 }
+
+void CSDL_Setup::Begin()
+{
+	SDL_PollEvent(GetEvent());
+	SDL_RenderClear(GetRenderer());
+}
+
+void CSDL_Setup::End() const
+{
+	SDL_RenderPresent(GetRenderer());
+}
