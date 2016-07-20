@@ -2,9 +2,9 @@
 class CSDL_Setup
 {
 public:
-	CSDL_Setup(bool* quit);
+	CSDL_Setup(bool* quit); //We pass a reference to quit
 	~CSDL_Setup();
-	SDL_Renderer* GetRenderer() const;
+	SDL_Renderer* GetRenderer() const; //TWO GETTERS to get the event and renderer
 	SDL_Event* GetEvent();
 
 private:

@@ -18,6 +18,6 @@ private:
 	SDL_Texture* bob_image;
 	SDL_Rect bob_rect;
 
-	CSDL_Setup* csdl_setup;
+	CSDL_Setup* csdl_setup; //OBJECT OF CSDL CLASS to get the renderer and event out of SDL_Setup
 };
 

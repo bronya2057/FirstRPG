@@ -6,6 +6,7 @@ CMain::CMain()
 {
 	quit = false;
 
+
 	csdl_setup = new CSDL_Setup(&quit);
 	//SPRITES
 
@@ -46,7 +47,6 @@ void CMain::GameLoop(void) const
 		SDL_RenderCopy(csdl_setup->GetRenderer(), grass_image, nullptr, &grass_rect);
 		//DRAW BOB
 		SDL_RenderCopy(csdl_setup->GetRenderer(), bob_image, nullptr, &bob_rect);
-
 
 
 
