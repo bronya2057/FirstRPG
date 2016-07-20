@@ -28,7 +28,7 @@ int main(int argc, char * argv[])
 	SDL_Event* mainEvent = new SDL_Event;
 	///////////////CREATE TEXTURE THEN SET COORDS AND DROP IT
 	SDL_Texture* grass_image;
-	grass_image = IMG_LoadTexture(renderer,"grass.bmp");
+	grass_image = IMG_LoadTexture(renderer,"data/grass.bmp");
 
 	SDL_Rect grass_rect;
 	grass_rect.x = 0;
@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
 	grass_rect.h = 400;
 
 	SDL_Texture* bob_image;
-	bob_image = IMG_LoadTexture(renderer, "man1.png");
+	bob_image = IMG_LoadTexture(renderer, "data/man.png");
 
 	SDL_Rect bob_rect;
 	bob_rect.x = 100;
@@ -51,7 +51,7 @@ int main(int argc, char * argv[])
 		SDL_RenderClear(renderer);
 		//EXECUTION WHAT IS BEHIND WHAT
 		//DRAW GRASS
-		SDL_RenderCopy(renderer, grass_image, NULL,&grass_rect );
+		SDL_RenderCopy(renderer, grass_image, nullptr,&grass_rect );
 		//DRAW BOB
 		SDL_RenderCopy(renderer, bob_image, nullptr, &bob_rect);
 
@@ -60,7 +60,8 @@ int main(int argc, char * argv[])
 
 		SDL_RenderPresent(renderer);
 	}
-
+	SDL_DestroyTexture(bob_image);
+	SDL_DestroyTexture(grass_image);
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
 	delete mainEvent;
