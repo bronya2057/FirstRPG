@@ -6,8 +6,8 @@
 
 int main(int argc, char * argv[])
 {
-	CMain wind;
-	wind.GameLoop();
+	CMain* cmain=new CMain(400,600);
+	cmain->GameLoop();
 	
 	return 0;
 }

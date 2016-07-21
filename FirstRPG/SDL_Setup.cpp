@@ -2,10 +2,10 @@
 #include "SDL_Setup.h"
 
 
-CSDL_Setup::CSDL_Setup(bool* quit)
+CSDL_Setup::CSDL_Setup(bool* quit,int ScreenHeigth,int ScreenWidth)
 {
 	window = nullptr;
-	window = SDL_CreateWindow("My First RPG", 100, 100, 600, 400, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("My First RPG", 100, 100, ScreenWidth, ScreenHeigth, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 	if (window == nullptr)
 	{
 		std::cout << "WINDOW couldn't be created";

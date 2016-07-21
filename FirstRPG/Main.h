@@ -5,7 +5,7 @@
 class CMain
 {
 public:
-	CMain();
+	CMain(int passed_ScreenWidth, int passed_ScreenHeight);
 	~CMain();
 	void GameLoop() const;
 	CSprite* grass;
@@ -13,7 +13,8 @@ public:
 
 private:
 	bool quit;
-
+	int ScreenWidth;
+	int ScreenHeight;
 	
 
 
