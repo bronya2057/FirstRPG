@@ -9,10 +9,10 @@ CSprite::CSprite(SDL_Renderer* passed_renderer, std::string filepath, int x, int
 	image = IMG_LoadTexture(passed_renderer, filepath.c_str());
 	if (image == nullptr) { std::cout << "Couldn't load"<<filepath.c_str()<< std::endl; }
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = 600;
-	rect.h = 400;
+	rect.x = x;
+	rect.y = y;
+	rect.w = width;
+	rect.h = height;
 }
 
 

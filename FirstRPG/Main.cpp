@@ -17,11 +17,14 @@ CMain::CMain(int passed_ScreenWidth,int passed_ScreenHeight)
 
 CMain::~CMain()
 {
+	delete csdl_setup;
+	delete grass;
+	delete bob;
 
 	
 }
 
-void CMain::GameLoop(void) const
+void CMain::GameLoop(void) 
 {
 	while (!quit && csdl_setup->GetEvent()->type != SDL_QUIT)
 	{
@@ -30,6 +33,9 @@ void CMain::GameLoop(void) const
 		//EXECUTION WHAT IS BEHIND WHAT
 		
 		grass->Draw();
+			
+			
+
 		bob->Draw();
 
 		csdl_setup->End();
